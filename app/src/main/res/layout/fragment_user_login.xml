@@ -1,0 +1,290 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false">
+
+
+            <ImageView
+                android:id="@+id/bgImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/image_default__image"
+                android:scaleType="centerCrop"
+                android:tint="@color/overlay_dark_40"
+                android:src="@drawable/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Base.PSTheme.AppBarOverlay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@color/global__primary"
+                    app:popupTheme="@style/Base.PSTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bgImageView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_40"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                    tools:layout_editor_absoluteX="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:isScrollContainer="true"
+                            android:paddingStart="@dimen/space_16"
+                            android:paddingEnd="@dimen/space_16"
+                            android:singleLine="true"
+                            android:text="Akses seluruh fitur dengan"
+                            android:textColor="@color/text__white"
+                            android:shadowColor="@color/grey_60"
+                            android:shadowRadius="2"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:textSize="@dimen/font_h6_size"
+                            android:textStyle="bold"
+                            app:font='@{"normal"}'
+                            app:textSize='@{"edit_text"}' />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:isScrollContainer="true"
+                            android:paddingStart="@dimen/space_16"
+                            android:paddingEnd="@dimen/space_16"
+                            android:singleLine="true"
+                            android:text="Akun"
+                            android:textColor="@color/text__white"
+                            android:shadowColor="@color/grey_60"
+                            android:shadowRadius="2"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:textSize="@dimen/font_h6_size"
+                            android:textStyle="bold"
+                            app:font='@{"normal"}'
+                            app:textSize='@{"edit_text"}' />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/view9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:gravity="center"
+                        android:text="Masuk dengan nomor telepon atau"
+                        android:textColor="@color/text__white"
+                        android:shadowColor="@color/grey_60"
+                        android:shadowRadius="2"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view9">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/space_4"
+                            android:text="nomor"
+                            android:textColor="@color/text__white"
+                            android:shadowColor="@color/grey_60"
+                            android:shadowRadius="2"
+                            android:shadowDx="1"
+                            android:shadowDy="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/space_4"
+                            android:text="Whatsapp"
+                            android:textColor="@color/text__white"
+                            android:shadowColor="@color/grey_60"
+                            android:shadowRadius="2"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Anda"
+                            android:textColor="@color/text__white"
+                            android:shadowColor="@color/grey_60"
+                            android:shadowRadius="2"
+                            android:shadowDx="1"
+                            android:shadowDy="1"/>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_68">
+
+                    <View
+                        android:id="@+id/phoneLoginButton"
+                        android:layout_width="280dp"
+                        android:layout_height="@dimen/space_44"
+                        android:layout_margin="@dimen/space_16"
+                        android:layout_marginStart="@dimen/space_28"
+                        android:layout_marginTop="@dimen/space_80"
+                        android:layout_marginEnd="@dimen/space_28"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/btn_gradient_style"
+                        android:text="Login"
+                        android:textColor="@color/text__white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.109" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="@dimen/space_36"
+                        android:layout_marginLeft="@dimen/space_14"
+                        android:tint="@color/md_white_1000"
+                        android:src="@drawable/ic_wa"
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneLoginButton"
+                        app:layout_constraintEnd_toEndOf="@+id/phoneLoginButton"
+                        app:layout_constraintHorizontal_bias="0.224"
+                        app:layout_constraintStart_toStartOf="@+id/phoneLoginButton"
+                        app:layout_constraintTop_toTopOf="@+id/phoneLoginButton"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masuk atau Daftar"
+                        android:layout_marginLeft="@dimen/space_30"
+                        android:textColor="@color/text__white"
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneLoginButton"
+                        app:layout_constraintEnd_toEndOf="@+id/phoneLoginButton"
+                        app:layout_constraintStart_toStartOf="@+id/phoneLoginButton"
+                        app:layout_constraintTop_toTopOf="@+id/phoneLoginButton" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotPasswordButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/space_68"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneLoginButton"
+                    app:layout_constraintVertical_bias="0.372">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:gravity="center"
+                        android:text="Tidak memiliki akses ke nomor telepon"
+                        android:textColor="@color/text__white"
+                        android:shadowColor="@color/grey_60"
+                        android:shadowRadius="2"
+                        android:shadowDx="1"
+                        android:shadowDy="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="yang terdaftar?"
+                        android:textColor="@color/text__white"
+                        android:shadowColor="@color/grey_60"
+                        android:shadowRadius="2"
+                        android:shadowDx="1"
+                        android:shadowDy="1"/>
+
+                    <Button
+                        android:id="@+id/btn_call_center"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:gravity="center"
+                        android:text="Hubungi kami"
+                        android:textColor="@color/orange_500" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_20"
+                    android:text="PT. PRODES BANGUN DESA"
+                    android:textColor="@color/text__white"
+                    android:textSize="@dimen/font_body_s_size"
+                    android:shadowColor="@color/grey_60"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"></TextView>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

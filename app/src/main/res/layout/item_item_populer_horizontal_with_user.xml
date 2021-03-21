@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.mrii.prodes.viewobject.Item" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView25"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{item.defaultPhoto.imgPath}"
+            app:riv_corner_radius="8dp"
+            app:riv_border_width="1dip"
+            app:riv_border_color="@color/grey_10"
+            app:riv_mutate_background="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/image_default__image"
+            tools:srcCompat="@drawable/default_image" />
+
+        <ImageView
+            android:id="@+id/featuredIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_feature_circle_24" />
+
+        <TextView
+            android:id="@+id/conditionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_condition"
+            android:contentDescription="@string/image_default__image"
+            android:paddingStart="@dimen/space_8"
+            android:paddingTop="@dimen/space_4"
+            android:paddingEnd="@dimen/space_16"
+            android:paddingBottom="@dimen/space_8"
+            android:layout_margin="@dimen/space_1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/font_body_size"
+            app:font='@{"normal"}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Bekas" />
+
+
+        <TextView
+            android:id="@+id/isSoldTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/global__primary_transparent"
+            android:paddingStart="@dimen/space_8"
+            android:paddingTop="@dimen/space_8"
+            android:paddingEnd="@dimen/space_8"
+            android:paddingBottom="@dimen/space_8"
+            android:text="@string/item_entry_sold"
+            android:layout_marginLeft="@dimen/space_1"
+            android:layout_marginRight="@dimen/space_1"
+            android:textColor="@color/md_white_1000"
+            app:font='@{"normal"}'
+            app:layout_constraintBottom_toTopOf="@+id/bottomView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView25"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_disk"
+            android:layout_margin="@dimen/space_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="@{item.title}"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/text__white"
+                android:textSize="@dimen/font_title_size"
+                app:font='@{"normal"}'/>
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:paddingBottom="8dp"
+                android:textSize="@dimen/font_title_size"
+                android:textColor="@color/text__white"
+                app:font='@{"normal"}'
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/isSoldTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                app:font='@{"normal"}'-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/priceTextView"-->
+<!--                android:textColor="@color/text__primary_light"-->
+<!--                android:textSize="@dimen/font_body_size"/>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:paddingBottom="8dp"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        &lt;!&ndash;        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginStart="4dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginTop="4dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginEnd="4dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginBottom="4dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:shadowColor="@color/global__primary"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:shadowRadius="5.0"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardCornerRadius="@dimen/space_8"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardElevation="1dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toTopOf="parent">&ndash;&gt;-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            &lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/profileCircleImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="@dimen/space_36"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="@dimen/space_36"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:contentDescription="@string/image_default__image"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:imageProfileUrl="@{item.user.userProfilePhoto}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:srcCompat="@drawable/circle_default_image" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/nameTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:ellipsize="end"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:maxLines="1"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:text="@{item.user.userName}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textSize="@dimen/font_body_size"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:font='@{"normal"}'&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/profileCircleImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toTopOf="@+id/profileCircleImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    tools:text="PSAdmin" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/addedDateStrTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textColor="@color/md_grey_500"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textSize="@dimen/font_body_s_size"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:font='@{"normal"}'&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/profileCircleImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/nameTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    tools:text="1 hour ago" />&ndash;&gt;-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cardView12"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                app:cardElevation="0dp"-->
+<!--                android:clickable="true"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                app:cardBackgroundColor="@color/grey_10"-->
+<!--                app:contentPadding="0.5dp"-->
+<!--                app:cardCornerRadius="5dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/addedDateStrTextView">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:contentDescription="@string/image_default__image"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        app:imageUrl="@{item.defaultPhoto.imgPath}"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:srcCompat="@drawable/default_image" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/isSoldTextView"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="0dp"-->
+<!--                        android:layout_marginEnd="0dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:background="@color/global__primary_transparent"-->
+<!--                        android:paddingStart="@dimen/space_8"-->
+<!--                        android:paddingTop="@dimen/space_8"-->
+<!--                        android:paddingEnd="@dimen/space_8"-->
+<!--                        android:paddingBottom="@dimen/space_8"-->
+<!--                        android:text="@string/item_entry_sold"-->
+<!--                        android:textColor="@color/md_white_1000"-->
+<!--                        app:font='@{"normal"}'-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/titleTextView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="@{item.title}"-->
+<!--                android:textColor="@color/text__primary_dark"-->
+<!--                android:textSize="@dimen/font_title_size"-->
+<!--                app:font='@{"normal"}'-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cardView12"-->
+<!--                tools:text="-" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/priceTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:maxLength="13"-->
+<!--                android:textColor="@color/global__primary"-->
+<!--                android:textSize="@dimen/font_body_size"-->
+<!--                app:font='@{"normal"}'-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/titleTextView"-->
+<!--                tools:text="Rp.0" />-->
+
+<!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/addressTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="4dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:text="@{item.itemLocation.name}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textColor="@color/md_blue_300"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textSize="@dimen/font_body_s_size"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:font='@{"normal"}'&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView2"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toTopOf="@+id/imageView2"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    tools:text="Singapore" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/itemTypeNameTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:ellipsize="end"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:maxLines="1"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:text="@{item.itemType.name}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textColor="@color/md_grey_500"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:textSize="@dimen/font_body_s_size"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:font='@{"normal"}'&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintEnd_toStartOf="@+id/favoriteImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView5"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toTopOf="@+id/imageView5"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    tools:text="sale" />&ndash;&gt;-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/conditionTextView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:textColor="@color/md_blue_300"-->
+<!--                android:textSize="@dimen/font_body_s_size"-->
+<!--                app:font='@{"normal"}'-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/priceTextView"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/priceTextView"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/priceTextView"-->
+<!--                tools:text="( Baru )" />-->
+
+<!--            &lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/imageView2"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="15dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="15dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:contentDescription="@string/image_default__image"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:tint="@color/md_grey_500"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/conditionTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:srcCompat="@drawable/baseline_pin_black_24" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:id="@+id/imageView5"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="5dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="5dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginStart="12dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginBottom="16dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:contentDescription="@string/image_default__image"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/conditionTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:srcCompat="@drawable/circle_grey" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:orientation="horizontal"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    android:layout_marginRight="7dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/conditionTextView">&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                    <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:id="@+id/favoriteImageView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_width="16dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_height="16dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_marginStart="52dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_marginRight="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:background="@drawable/heart_on"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:contentDescription="@string/image_default__image"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:padding="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        app:layout_constraintVertical_bias="1.0"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        app:like_drawable="@drawable/heart_on"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        app:unlike_drawable="@drawable/heart_off" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:id="@+id/favCountTextView"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:paddingLeft="5dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:text="@{item.favouriteCount}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:textColor="@color/md_grey_500"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        android:textSize="@dimen/font_body_s_size"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        app:font='@{"normal"}'&ndash;&gt;-->
+<!--            &lt;!&ndash;                        app:layout_constraintVertical_bias="0.0"&ndash;&gt;-->
+<!--            &lt;!&ndash;                        tools:text="10" />&ndash;&gt;-->
+<!--            &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        &lt;!&ndash;        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>

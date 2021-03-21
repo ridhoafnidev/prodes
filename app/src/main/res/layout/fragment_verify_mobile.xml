@@ -1,0 +1,580 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false">
+
+            <ImageView
+                android:id="@+id/bgImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/image_default__image"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView32"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginTop="60dp"-->
+<!--                android:contentDescription="@string/image_default__image"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/login_app_logo" />-->
+
+            <TextView
+                android:id="@+id/aa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:padding="@dimen/space_16"
+                android:paddingBottom="@dimen/space_4"
+                android:text="Hi, Prodesian"
+                android:layout_marginTop="@dimen/space_100"
+                android:textColor="@color/grey_40"
+                android:textSize="@dimen/font_h7_size"
+                app:font='@{"bold"}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bgImageView" />
+
+            <LinearLayout
+                android:id="@+id/ll_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/space_8"
+                android:gravity="left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aa">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:isScrollContainer="true"
+                    android:paddingStart="@dimen/space_16"
+                    android:paddingEnd="@dimen/space_16"
+                    android:singleLine="true"
+                    android:text="Kode verifikasi sudah dikirim"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="@dimen/font_h5_size"
+                    android:textStyle="bold"
+                    app:font='@{"normal"}'
+                    app:textSize='@{"edit_text"}' />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:isScrollContainer="true"
+                    android:paddingStart="@dimen/space_16"
+                    android:paddingEnd="@dimen/space_16"
+                    android:singleLine="true"
+                    android:text="ke nomor handphone"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="@dimen/font_h5_size"
+                    android:textStyle="bold"
+                    app:font='@{"normal"}'
+                    app:textSize='@{"edit_text"}' />
+
+                <TextView
+                    android:paddingTop="@dimen/space_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:isScrollContainer="true"
+                    android:paddingStart="@dimen/space_16"
+                    android:paddingEnd="@dimen/space_16"
+                    android:singleLine="true"
+                    android:text="Masukan kode yang kami SMS ke nomor"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/font_body_size"
+                    app:font='@{"normal"}'
+                    app:textSize='@{"edit_text"}' />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:isScrollContainer="true"
+                        android:paddingStart="@dimen/space_16"
+                        android:singleLine="true"
+                        android:text="Handphone-mu "
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/font_body_size"
+                        app:font='@{"normal"}'
+                        app:textSize='@{"edit_text"}' />
+
+                    <TextView
+                        android:id="@+id/phoneTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:isScrollContainer="true"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:text="+620822xxx"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/font_title_size"
+                        app:font='@{"normal"}'
+                        app:textSize='@{"edit_text"}' />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="312dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/space_48"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_corner_shape_for_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_one">
+
+                <com.mrii.prodes.utils.MyEditText
+                    android:id="@+id/enterCodeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="@dimen/space_16"
+                    android:hint="Contoh: 651290"
+                    android:inputType="number"
+                    android:isScrollContainer="true"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/space_16"
+                    android:paddingEnd="@dimen/space_16"
+                    android:singleLine="true"
+                    android:textColor="@color/text__primary"
+                    app:font='@{"normal"}'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:textSize='@{"edit_text"}' />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/verificationButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner_shape_button_for_login"
+                android:text="Verifikasi"
+                android:textColor="@color/button__primary_text"
+                app:layout_constraintBottom_toTopOf="@+id/forgotPasswordButton"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintVertical_bias="0.188" />
+
+            <Button
+                android:id="@+id/notSendCodeButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:padding="@dimen/space_4"
+                android:layout_marginTop="@dimen/space_32"
+                android:text="KIRIM ULANG KODE"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_40"
+                app:font='@{"normal"}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verificationButton"
+                app:layout_constraintVertical_bias="1.0"
+                app:textSize='@{"button_text"}' />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--    &lt;!&ndash;    <androidx.core.widget.NestedScrollView&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:fillViewport="true">&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:orientation="vertical">&ndash;&gt;-->
+
+
+<!--    &lt;!&ndash;        <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="170dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginTop="2dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:background="@color/global__primary"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintTop_toTopOf="parent">&ndash;&gt;-->
+
+<!--    &lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:id="@+id/informationTextView"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_marginStart="32dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_marginTop="32dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_marginEnd="32dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:text="@string/verify_phone__informateion"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textAlignment="center"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textColor="@color/md_white_1000"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textSize="@dimen/font_title_size"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:font='@{"normal"}'&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:id="@+id/phoneTextView"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textAlignment="center"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textColor="@color/md_white_1000"&ndash;&gt;-->
+<!--    &lt;!&ndash;                android:textSize="@dimen/font_title_size"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:font='@{"normal"}'&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;                app:layout_constraintTop_toBottomOf="@+id/informationTextView"&ndash;&gt;-->
+<!--    &lt;!&ndash;                tools:text="Someone@gmail.com" />&ndash;&gt;-->
+<!--    &lt;!&ndash;        </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/imageView31"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginTop="110dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:contentDescription="@string/image_default__image"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:srcCompat="@drawable/baseline_very_phone_icon" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <EditText&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/enterCodeEditText"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginTop="44dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:background="@null"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:hint="@string/verify_phone_code"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:inputType="textPersonName"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:padding="@dimen/space_2"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textAlignment="center"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@color/md_grey_800"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="@dimen/font_h5_size"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:font='@{"normal"}'&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/imageView31" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&lt;!&ndash;        <View&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:id="@+id/view19"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_height="1dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:background="@color/md_grey_400"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/submitButton" />&ndash;&gt;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&lt;!&ndash;        <Button&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:id="@+id/changeEmailButton"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_marginTop="8dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingStart="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingTop="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingEnd="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingBottom="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:text="@string/verify_email__change_email"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textAllCaps="false"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            style="@style/Widget.AppCompat.Button.Borderless"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textColor="@color/global__primary"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textSize="@dimen/font_body_size"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:font='@{"normal"}'&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/view19" />&ndash;&gt;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&lt;!&ndash;        <Button&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:id="@+id/resentCodeButton"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_marginTop="8dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingStart="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingTop="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingEnd="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:paddingBottom="@dimen/space_16"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:text="@string/verify_email__resent_code"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textColor="@color/global__primary"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textSize="@dimen/font_body_size"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:font='@{"normal"}'&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            android:textAllCaps="false"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            style="@style/Widget.AppCompat.Button.Borderless"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/view19" />&ndash;&gt;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <Button&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/submitButton"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@color/md_white_1000"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="18sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:font='@{"normal"}'&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:text="@string/verify_email__submit"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/enterCodeEditText" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    </androidx.core.widget.NestedScrollView>&ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:contentInsetStartWithNavigation="0dp"-->
+<!--            app:layout_collapseMode="pin"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:paddingEnd="?attr/actionBarSize"-->
+<!--                    android:paddingRight="?attr/actionBarSize"-->
+<!--                    android:text="VERIFICATION"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+<!--                    android:textColor="@color/grey_80" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:src="@drawable/img_code_verification" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="280dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/spacing_medium"-->
+<!--                    android:text="Kode OTP telah dikirimkan ke handphone anda. Silahkan isi kode tersebut pada kotak dibawah ini"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
+<!--                    android:textColor="@color/grey_60" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="@dimen/spacing_large"-->
+<!--                    android:layout_marginTop="@dimen/spacing_xlarge"-->
+<!--                    android:orientation="horizontal">-->
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit1"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="@dimen/spacing_medium"-->
+<!--                        android:layout_height="0dp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit2"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="@dimen/spacing_medium"-->
+<!--                        android:layout_height="0dp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit3"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="@dimen/spacing_medium"-->
+<!--                        android:layout_height="0dp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit4"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <View-->
+<!--                        android:layout_width="@dimen/spacing_medium"-->
+<!--                        android:layout_height="0dp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit5"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <View-->
+<!--                        android:layout_width="@dimen/spacing_medium"-->
+<!--                        android:layout_height="0dp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/digit6"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                        android:textColor="@color/grey_90"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/phoneTextView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/md_white_1000"-->
+<!--                    android:textSize="@dimen/font_title_size"-->
+<!--                    app:font='@{"normal"}'-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/informationTextView"-->
+<!--                    tools:text="Someone@gmail.com" />-->
+<!--                <Button-->
+<!--                    android:id="@+id/submitButton"-->
+<!--                    style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="VERIFIKASI"-->
+<!--                    android:textColor="@color/bt_color_primary" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </RelativeLayout>-->
+
+<!--    </LinearLayout>-->
+<!--</layout>-->

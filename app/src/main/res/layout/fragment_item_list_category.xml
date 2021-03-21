@@ -1,0 +1,203 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loadingMore"
+            type="boolean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/load_more_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
+            android:layout_gravity="top"
+            android:indeterminate="true"
+            app:layout_anchor="@+id/constraintLayout3"
+            app:layout_anchorGravity="top|center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleGone="@{loadingMore}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_12"
+            android:background="@color/md_white_1000"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/news_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="150dp"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4"
+                    android:paddingBottom="@dimen/space_16"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:spanCount="2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noItemConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/noDataImageView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/image_default__image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/baseline_empty_item_grey_24" />
+
+                    <TextView
+                        android:id="@+id/noItemTitleTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:text="@string/Feature_UI__item_list_no_item_title"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/font_h6_size"
+                        android:textStyle="bold"
+                        app:font='@{"normal"}'
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/noDataImageView"
+                        tools:text="No Item" />
+
+                    <TextView
+                        android:id="@+id/noItemDescTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="24dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/Feature_UI__item_list_no_item_desc"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/font_body_size"
+                        app:font='@{"normal"}'
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/noItemTitleTextView"
+                        tools:text="Desc" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_14"
+                android:layout_marginBottom="@dimen/space_6"
+                android:background="@drawable/background_floating_filter"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/typeButton"
+                        android:layout_width="60dp"
+                        android:textColor="@color/global__primary"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/space_12"
+                        android:textAllCaps="false"
+                        android:text="Filter"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:background="@color/global__primary"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:layout_marginBottom="@dimen/space_12"
+                        android:layout_height="20dp">
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/tuneButton"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:textColor="@color/global__primary"
+                        android:layout_toRightOf="@+id/filter"
+                        android:textAllCaps="false"
+                        android:layout_width="60dp"
+                        android:textSize="@dimen/space_12"
+                        android:layout_height="wrap_content"
+                        android:text="Sort"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:background="@color/global__primary"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:layout_marginBottom="@dimen/space_12"
+                        android:layout_height="20dp">
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/sortButton"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:textColor="@color/global__primary"
+                        android:layout_toRightOf="@+id/filter"
+                        android:textAllCaps="false"
+                        android:layout_width="60dp"
+                        android:textSize="@dimen/space_12"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_maps"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

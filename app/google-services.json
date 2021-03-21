@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "996749712030",
+    "firebase_url": "https://prodesian-12983.firebaseio.com",
+    "project_id": "prodesian-12983",
+    "storage_bucket": "prodesian-12983.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996749712030:android:4fbf35bf3bcc1bc36bb98f",
+        "android_client_info": {
+          "package_name": "com.mrii.prodes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996749712030-rkbs09qmq1v26m2snr8fnk8jp1cbr62g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mrii.prodes",
+            "certificate_hash": "f63d14ecbdcadac5504627bcbbca0c1c2d2c5d08"
+          }
+        },
+        {
+          "client_id": "996749712030-hko0ilm4taunts27po2j290qvv9amc1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwPnyY5N4qBcJ1gBi6rkqVs3_60MvS_74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996749712030-hko0ilm4taunts27po2j290qvv9amc1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_menu"
+        android:icon="@drawable/menu_store_new"
+        android:title="@string/menu__home"/>
+
+    <item
+        android:id="@+id/pronews_menu"
+        android:icon="@drawable/menu_pronews"
+        android:title="@string/menu__interest"
+        />
+
+    <item
+        android:id="@+id/add_product_menu"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="@string/menu__add_product"
+        />
+
+    <item
+        android:id="@+id/message_menu"
+        android:icon="@drawable/menu_riwayat"
+        android:title="@string/menu__message"
+        />
+
+    <item
+        android:id="@+id/me_menu"
+        android:icon="@drawable/menu_profil_new"
+        android:title="@string/menu__user"
+        />
+
+</menu>

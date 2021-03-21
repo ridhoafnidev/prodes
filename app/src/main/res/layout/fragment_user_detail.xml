@@ -1,0 +1,281 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.mrii.prodes.viewobject.User" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_white_1000">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_white_1000"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_white_1000"
+                    tools:context="com.mrii.psmultistore.ui.user.ProfileFragment">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/profileImageView"
+                        app:riv_corner_radius="@dimen/space_5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/image_default__image"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:src="@drawable/default_profile"
+                        app:imageUrl="@{user.userProfilePhoto}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/nameUmkmTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="18dp"
+                        android:ellipsize="end"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text__primary_dark"
+                        android:textSize="@dimen/font_h7_size"
+                        android:textStyle="bold"
+                        app:font='@{"normal"}'
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:textSize='@{"font_title_size"}'
+                        tools:text="Name" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text__primary_dark"
+                        android:textSize="@dimen/font_title_size"
+                        app:font='@{"normal"}'
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/nameUmkmTextView"
+                        app:textSize='@{"font_title_size"}'
+                        tools:text="Name" />
+
+                    <TextView
+                        android:id="@+id/namaKelurahanTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:ellipsize="end"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/global__primary"
+                        android:textSize="@dimen/font_title_size"
+                        app:font='@{"normal"}'
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+                        app:textSize='@{"font_title_size"}'
+                        tools:text="Name" />
+
+                    <TextView
+                        android:id="@+id/overAllRatingTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text__primary"
+                        android:textSize="@dimen/font_body_size"
+                        app:font='@{"normal"}'
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/space_28"
+                        android:layout_marginStart="@dimen/space_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+                        app:textSize='@{"font_body_size"}'
+                        tools:text="OAR" />
+
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/phoneImageView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="@string/image_default__image"
+                        android:src="@drawable/phone"
+                        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/overAllRatingTextView" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/phoneTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text__primary"
+                        android:textSize="@dimen/font_body_size"
+                        app:font='@{"normal"}'
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/phoneImageView"
+                        app:layout_constraintTop_toTopOf="@+id/phoneImageView"
+                        tools:text="09456548" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/view__primary_line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.146"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/overAllRatingTextView" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/view__primary_line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/seeAllTextView" />
+
+
+                    <TextView
+                        android:id="@+id/joinedDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_grey_shape_text"
+                        android:padding="@dimen/space_6"
+                        android:text="-"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:textColor="@color/text__primary_light"
+                        android:textSize="@dimen/space_10"
+                        app:font='@{"normal"}'
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3"
+                        tools:text="Bergabung Sejak" />
+
+                    <TextView
+                        android:id="@+id/seeAllTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/profile__see_all"
+                        android:textColor="@color/global__primary"
+                        app:font='@{"normal"}'
+                        app:layout_constraintBottom_toBottomOf="@+id/joinedDateTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/joinedDateTextView" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBarInformation"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:focusable="true"
+                        android:numStars="5"
+                        android:theme="@style/RatingBar"
+                        app:layout_constraintBottom_toBottomOf="@+id/overAllRatingTextView"
+                        app:layout_constraintStart_toEndOf="@+id/overAllRatingTextView"
+                        app:layout_constraintTop_toTopOf="@+id/overAllRatingTextView" />
+
+                    <TextView
+                        android:id="@+id/ratingCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textSize="@dimen/space_12"
+                        android:textColor="@color/text__primary"
+                        app:font='@{"normal"}'
+                        app:layout_constraintBottom_toBottomOf="@+id/ratingBarInformation"
+                        app:layout_constraintStart_toEndOf="@+id/ratingBarInformation"
+                        app:layout_constraintTop_toTopOf="@+id/ratingBarInformation"
+                        tools:text="Rcount" />
+
+                    <Button
+                        android:id="@+id/followBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_32"
+                        android:background="@drawable/rounded_corner_shape_button"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        app:followButton='@{user.isFollowed}'
+                        android:layout_marginEnd="@dimen/space_16"
+                        app:font='@{"normal"}'
+                        app:layout_constraintBottom_toBottomOf="@+id/ratingBarInformation"
+                        app:layout_constraintEnd_toStartOf="@+id/chatBtn"
+                        app:layout_constraintTop_toTopOf="@+id/ratingBarInformation"
+                        tools:text="Follow" />
+
+                    <ImageButton
+                        android:id="@+id/chatBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="@dimen/space_32"
+                        android:padding="@dimen/space_80"
+                        android:background="@drawable/rounded_corner_shape_button"
+                        android:textColor="@color/md_white_1000"
+                        android:src="@drawable/ic_chat_bubble_outline_white_24dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/followBtn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/space_16"
+                        app:layout_constraintTop_toTopOf="@+id/followBtn"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_own_item_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/space_16"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:spanCount="2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
